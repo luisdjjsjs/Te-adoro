@@ -1,4 +1,3 @@
-# Te-adoro
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,18 +31,25 @@
 </head>
 <body>
   <div class="container" id="container">
+    <!-- Linhas iniciais serão inseridas via JavaScript -->
   </div>
 
   <script>
     const container = document.getElementById('container');
+
+    // Função para adicionar um elemento "Te adoro"
     function appendTeAdoro() {
       const p = document.createElement('p');
       p.textContent = 'Te adoro';
       container.appendChild(p);
     }
+
+    // Adiciona múltiplas linhas iniciais
     for (let i = 0; i < 100; i++) {
       appendTeAdoro();
     }
+
+    // Ao clicar em qualquer lugar da página, adiciona mais um "Te adoro"
     document.body.addEventListener('click', () => {
       appendTeAdoro();
     });
